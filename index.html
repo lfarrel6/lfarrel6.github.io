@@ -5,11 +5,19 @@
 	<link rel='stylesheet' type='text/css' href='./index.css'/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src='lib/typed.js'></script>
-	<script type="text/javascript" src='./index.js'></script>
+	<!--<script type="text/javascript" src='./index.js'></script>-->
 </head>
 <body>
-	<div>
-		<h1 id='h-greeting'></h1>
+	<div id="typed-strings">
+	    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+	    <p>It <em>types</em> out sentences.</p>
 	</div>
+	<span id="typed"></span>
+	<script>
+	  var typed = new Typed('#typed', {
+	    stringsElement: '#typed-strings'
+	  });
+	</script>
+
 </body>
 </html>
