@@ -1,10 +1,45 @@
 body{
 	background-color: #000000;
-	color:#FFFFFF;
-	font-size: 20em;
 }
 
-#typed{
+#root{
+	height:100%;
+	display: grid;
+	grid-template-rows: 3fr 1fr;
+	grid-template-columns: 1fr 5fr 1fr;
+	grid-template-areas:'. Center .'
+			   'Bottom Bottom Bottom';
+}
+
+#projects{
+	margin-top: 5em;
+	grid-area: Bottom;
+	display:inline-grid;
+	grid-template-columns: 1fr 5fr 1fr;
+	grid-template-areas: '. CenterBtm .';
+	justify-items: center;
+}
+
+#projects > a, a:hover, a:active, a:focus{
+	text-decoration: none;
+	outline:0;
+	grid-area: CenterBtm;
+}
+
+#typing-holder{
+	grid-area: Center;
+	justify-items: center;
+}
+
+#h-greeting{
+	text-align: center;
 	color:#FFFFFF;
-	font-size: 20em;
+	font-size: 6em;
+}
+
+#sub-greeting{
+	margin-top: 0;
+	text-align: center;
+	color: #626161;
+	font-size: 1.5em;
 }
