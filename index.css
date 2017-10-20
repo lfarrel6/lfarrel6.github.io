@@ -16,14 +16,20 @@ body{
 	grid-area: Bottom;
 	display:inline-grid;
 	grid-template-columns: 1fr 5fr 1fr;
-	grid-template-areas: '. CenterBtm .';
+	grid-template-rows: 2fr 1fr;
+	grid-template-areas: 'UpperLeft UpperCtr UpperRight'
+						 'BtmLeft BtmCtr BtmRight';
 	justify-items: center;
 }
 
 #projects > a, a:hover, a:active, a:focus{
 	text-decoration: none;
 	outline:0;
-	grid-area: CenterBtm;
+	grid-area: UpperCtr;
+}
+
+#socials{
+	grid-area: BtmCtr;
 }
 
 #typing-holder{
