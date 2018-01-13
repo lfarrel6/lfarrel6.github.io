@@ -1,0 +1,135 @@
+html, body{
+	height:100%;
+	margin: 0;
+	font-family: "Amiko";
+	color: #ffffff;
+}
+
+#content-wrapper{
+	transition: margin-left 0.5s;
+	background-color: #100c08;
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: "tl ."
+						 "left right"
+						 "left right"
+						 "left right"
+						 "left right"
+						 "left right"
+						 ". .";
+}
+
+#menu-tile{
+	grid-area: tl;
+	padding: 10px;
+}
+
+#menu-tile img{
+	cursor: pointer;
+	height: 30px;
+	width: 30px;
+}
+
+#left-body{
+	grid-area: left;
+	display: grid;
+	min-height: 100%;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: 
+						"."
+	                    "centerspace"
+	                    "subname";
+}
+
+#name-tile{
+	padding: 5%;
+	grid-area: centerspace;
+	text-align: center;
+}
+
+#name{
+	padding: 0;
+	margin: 0;
+}
+
+#sub-name{
+	margin:0;
+}
+
+#right-body{
+	grid-area: right;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+						"."
+						"project-1"
+						"project-2"
+						"project-3"
+						".";
+}
+
+.project-tiles{
+	text-align: center;
+}
+
+.project-link:hover {
+	opacity: 0.15;
+	cursor: pointer;
+}
+
+#project-1{
+	grid-area: project-1;
+}
+#project-2{
+	grid-area: project-2;
+}
+a{
+	color: #ffffff;
+	text-decoration: none;
+}
+#project-3{
+	grid-area: project-3;
+}
+
+#sidenav{
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+	background-color: #2a323a;
+}
+
+#sidenav > a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #100c08;
+	display: block;
+	transition: 0.3s;
+}
+
+.social-icons{
+	height: 25px;
+	width: 25px;
+	color: #ffffff;
+	margin-right: 10px;
+}
+
+#sidenav a:hover{
+	color: #f1f1f1;
+}
+
+#sidenav .closebtn{
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}

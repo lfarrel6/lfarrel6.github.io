@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src='lib/typed.js'></script>
+</head>
+<body>
+	<div id="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="https://github.com/lfarrel6">GitHub</a>
+		<a href="https://twitter.com/LiamPTFarrelly">Twitter</a>
+		<a href="https://linkedin.com/in/lfarrelly">LinkedIn</a>
+		<a href="https://instagram.com/liamptfarrelly">Instagram</a>
+	</div>
+	<div id="content-wrapper">
+		
+		<div id="menu-tile">
+			<img id="menu-btn" src="imgs/material-menu.svg" onclick="openNav()">
+		</div>
+
+		<div class="main-content" id="left-body">
+			<div id="name-tile">
+				<h1 id="name">LIAM FARRELLY</h1>
+				<div id="sub-name"></div>
+			</div>
+		</div>
+		<div class="main-content" id="right-body">
+			<div class="project-tiles" id="project-1"><h3 class="project-link"></h3></div>
+			<div class="project-tiles" id="project-2"><a href="https://speakupp.co.uk"><h3 class="project-link">SpeakUpp</h3></a></div>
+			<div class="project-tiles" id="project-3"><h3 class="project-link"></h3></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var subscript = {
+			strings: ["More to come."],
+			typeSpeed: 50,
+			backSpeed: 50,
+			backDelay: 500,
+			showCursor: false
+		}
+
+		var runSubScript = new Typed('#sub-name', subscript);
+
+		function openNav(){
+			document.getElementById("sidenav").style.width = "250px";
+		}
+
+		function closeNav(){
+			document.getElementById("sidenav").style.width = "0px";
+		}
+
+	</script>
+</body>
+</html>
