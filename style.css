@@ -141,10 +141,11 @@ a{
 	top:0;
 	left:0;
 	display: none;
+	transition: 0.5s ease;
 	/*background-color: rgba(255,255,255,0.6);*/
 }
 
-#l3:target ~ #project-3-details{
+.project-details{
 	display:grid;
 	grid-template-rows: 1fr 4fr 1fr;
 	grid-template-columns: 1fr 4fr 1fr;
@@ -153,7 +154,7 @@ a{
 	                     '. . .';
 }
 
-#l3:target ~ #project-3-details > #details-wrapper{
+.details-wrapper{
 	grid-area: centre;
 	text-align: center;
 	padding: 3em;
@@ -161,12 +162,17 @@ a{
 	background-color: #fff;
 
 }
-#l3:target ~ #project-3-details > #details-wrapper > #details-heading{
-}
-#details-heading > h2{
+.details-heading > h2{
 	font-size:2em;
 }
-#details-heading > p{
+#speakupp{
+	color: #34148C;
+}
+#keepappy{
+	background-color: #009688;
+	border-radius: 10%;
+}
+.details-heading > p{
 	color:#323a45;
 	opacity:0.8;
 }
@@ -175,7 +181,7 @@ a{
 	text-decoration: underline;
 	cursor: pointer;
 }
-#details-close{
+.details-close{
 	cursor:pointer;
 	text-align: center;
 	padding: 2em;

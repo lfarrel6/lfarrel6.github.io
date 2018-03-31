@@ -30,25 +30,53 @@
 		</div>
 
 		<div class="main-content" id="right-body">
-			<div class="project-tiles" id="project-1"><a href="https://speakupp.co.uk"><h3 class="project-link">SpeakUpp</h3></a></div>
-			<div class="project-tiles" id="project-2"><a href="http://keepappy.com"><h3 class="project-link">KeepAppy</h3></a></div>
-			<div class="project-tiles" id="project-3"><a href="#l3"><h3 class="project-link">BLE Proxying</h3></a></div>
+			<div class="project-tiles" id="project-1"><h3 class="project-link" onclick="showL1()"">SpeakUpp</h3></div>
+			<div class="project-tiles" id="project-2"><h3 class="project-link" onclick="showL2()">KeepAppy</h3></div>
+			<div class="project-tiles" id="project-3"><h3 class="project-link" onclick="showL3()">BLE Proxying</h3></div>
 		</div>
 
-		<a class='hidden-anchor' id='l1'></a>
-		<a class='hidden-anchor' id='l2'></a>
-		<a class='hidden-anchor' id='l3'></a>
-
-		<div class="details" id='project-3-details'>
-			<span id='details-close' onclick='closeDetails3()'>X</span>
-			<div id='details-wrapper'>
-				<div id="details-heading">
-					<img src="imgs/Bluetooth_Smart_Logo.png" alt="Bluetooth Low Energy">
-					<h2>BLE Proxying</h2>
-					<p>I built a system for remote access to BLE devices.</p>
+		<div class="details" id='wrapper-1'>
+			<div class='project-details'>
+				<span class='details-close' onclick='closeDetails1()'>X</span>
+				<div class='details-wrapper'>
+					<div class="details-heading">
+						<img src="imgs/logo.jpg" alt="SpeakUpp">
+						<h2>SpeakUpp</h2>
+						<p>Bridging the gap between speaker and audience.</p>
+					</div>
+					<hr>
+					<p class='details-body'>SpeakUpp provides a platform for furthering audience engagement at various events. I cofounded SpeakUpp with Eoin and Liam in 2017. We're really excited to see it reach its potential.<hr>Check out our <a class='details-links' href='https://speakupp.co.uk'>website</a>.</p>
 				</div>
-				<hr>
-				<p id='details-body'>Using <a class='details-links' href="https://github.com/noble/noble">Noble</a>, and <a class='details-links' href="https://github.com/mcollina/node-coap">Node CoAP</a> I made a CoAP proxy server which tracks local bluetooth devices.<br>I also made a http client to speak to the CoAP proxy, providing users with a GUI while interacting with the proxy.<hr>Check out the project on <a class='details-links' href='https://github.com/lfarrel6/BLE-proxy-fyp'>Github</a>.</p>
+			</div>
+		</div>
+
+		<div class="details" id='wrapper-2'>
+			<div class='project-details'>
+				<span class='details-close' onclick='closeDetails2()'>X</span>
+				<div class='details-wrapper'>
+					<div close="details-heading">
+						<img src="imgs/keepappyvector.png" id='keepappy' alt="Keep Appy Logo">
+						<h2>KeepAppy</h2>
+						<p>Join the wellness movement today!</p>
+					</div>
+					<hr>
+					<p close='details-body'>KeepAppy is a mental well being app that helps you and your employees. I joined KeepAppy in March 2018 as a developer. I am delighted to have the opportunity to work on such a rewarding initiative.<hr>Check out the <a class='details-links' href='http://keepappy.com'>website</a>, or get the app!</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="details" id='wrapper-3'>
+			<div class='project-details'>
+				<span class='details-close' onclick='closeDetails3()'>X</span>
+				<div class='details-wrapper'>
+					<div class="details-heading">
+						<img src="imgs/Bluetooth_Smart_Logo.png" alt="Bluetooth Low Energy">
+						<h2>BLE Proxying</h2>
+						<p>I built a system for remote access to BLE devices.</p>
+					</div>
+					<hr>
+					<p class='details-body'>Using <a class='details-links' href="https://github.com/noble/noble">Noble</a>, and <a class='details-links' href="https://github.com/mcollina/node-coap">Node CoAP</a> I made a CoAP proxy server which tracks local bluetooth devices.<br>I also made a http client to speak to the CoAP proxy, providing users with a GUI while interacting with the proxy.<hr>Check out the project on <a class='details-links' href='https://github.com/lfarrel6/BLE-proxy-fyp'>Github</a>.</p>
+				</div>
 			</div>
 		</div>
 
@@ -72,9 +100,28 @@
 			document.getElementById("sidenav").style.width = "0px";
 		}
 
+		function showL1(){
+			document.getElementById('wrapper-1').style.display = 'block';
+		}
+
+		function showL2(){
+			document.getElementById('wrapper-2').style.display = 'block';
+		}
+
+		function showL3(){
+			document.getElementById('wrapper-3').style.display = 'block';
+		}
+
+		function closeDetails1(){
+			document.getElementById('wrapper-1').style.display = 'none';
+		}
+
+		function closeDetails2(){
+			document.getElementById('wrapper-2').style.display = 'none';
+		}
+
 		function closeDetails3(){
-			document.getElementById('project-3-details').style.display = 'none';
-			window.history.pushState({},document.title,'/');
+			document.getElementById('wrapper-3').style.display = 'none';
 		}
 
 	</script>
