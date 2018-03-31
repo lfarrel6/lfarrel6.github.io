@@ -176,6 +176,7 @@ a{
 	cursor: pointer;
 }
 #details-close{
+	cursor:pointer;
 	text-align: center;
 	padding: 2em;
 	grid-area:x;
