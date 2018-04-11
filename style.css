@@ -43,10 +43,24 @@ html, body{
 	                    "subname";
 }
 
-#name-tile{
-	padding: 5%;
+#branding-tile{
+	padding: 0 0 0 14%;
 	grid-area: centerspace;
-	text-align: center;
+}
+
+#logo-tile{
+	height: 120px;
+	width: 120px;
+	vertical-align: middle
+}
+
+#name-tile-parent{
+}
+
+#name-tile{
+	vertical-align: middle;
+	display: inline-block;
+	text-align: left;
 }
 
 #name{

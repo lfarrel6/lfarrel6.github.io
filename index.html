@@ -23,9 +23,12 @@
 		</div>
 
 		<div class="main-content" id="left-body">
-			<div id="name-tile">
-				<h1 id="name">LIAM FARRELLY</h1>
-				<div id="sub-name"></div>
+			<div id='branding-tile'>
+				<img src="imgs/logo-svg.svg" id='logo-tile'>
+				<div id='name-tile'>
+					<h1 id="name">LIAM FARRELLY</h1>
+					<div id="sub-name"></div>
+				</div>
 			</div>
 		</div>
 
@@ -82,6 +85,10 @@
 
 	</div>
 	<script type="text/javascript">
+		var ghostscript = {
+			strings: [" "],
+			showCursor: false
+		};
 		var subscript = {
 			strings: ["More to come."],
 			typeSpeed: 50,
@@ -89,8 +96,10 @@
 			backDelay: 500,
 			showCursor: false
 		}
-
-		var runSubScript = new Typed('#sub-name', subscript);
+		new Typed('#sub-name',ghostscript);
+		setTimeout(function(){
+			new Typed('#sub-name', subscript);
+		},800);
 
 		function openNav(){
 			document.getElementById("sidenav").style.width = "250px";
