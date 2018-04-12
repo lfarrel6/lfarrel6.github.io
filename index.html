@@ -96,10 +96,8 @@
 			backDelay: 500,
 			showCursor: false
 		}
-		new Typed('#sub-name',ghostscript);
-		setTimeout(function(){
-			new Typed('#sub-name', subscript);
-		},800);
+		
+		var subtext = new Typed('#sub-name', subscript);
 
 		function openNav(){
 			document.getElementById("sidenav").style.width = "250px";
