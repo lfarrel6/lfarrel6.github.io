@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liam Farrelly - About</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<link rel="stylesheet" type="text/css" href="about-styling.css">
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Merriweather|Montserrat|Playfair+Display" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="nav">
+		<div id="nav-bar">
+			<span class="branding" id="clickable-name">L<span class="hidden-letters">iam</span>F<span class="hidden-letters">arrelly</span></span>
+			<a href="../blog/blog.html" class="nav-btns">blog</a>
+			<p class="nav-btns active">about</p>
+			<a href="../works/works.html" class="nav-btns">works</a>
+		</div>
+	</div>
+
+	<div>
+		<h2 class="header">Computer Science & Business Graduate</h2>
+		<h2 class="header">Former Child</h2>
+		<h2 class="header">Based in: Dublin, Ireland</h2>
+		<h2 class="header">Currently: Seeking Employment... <a href="../contact/contact.html">Hiring</a>?</h2>
+		<h2 class="header">Experience in: Web, Mobile, and Full Stack Development</h2>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#clickable-name').click(function(){
+				window.location.href = '../../index.html';
+			});
+		});
+	</script>
+
+</body>
+</html>

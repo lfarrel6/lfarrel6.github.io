@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liam Farrelly - About</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<link rel="stylesheet" type="text/css" href="contact-styling.css">
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Merriweather|Montserrat|Playfair+Display" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="nav">
+		<div id="nav-bar">
+			<span class="branding" id="clickable-name">L<span class="hidden-letters">iam</span>F<span class="hidden-letters">arrelly</span></span>
+			<a href="../blog/blog.html" class="nav-btns">blog</a>
+			<p id="about-btn" class="nav-btns active">about</p>
+			<a href="../works/works.html" class="nav-btns">works</a>
+		</div>
+	</div>
+
+	<div class="header">
+		<h2>Here's <a href="../../assets/CV.pdf">my formal résumé.</a></h2>
+		<p>Feel free to reach out.</p>
+	</div>
+
+	<div id="contact-form">
+		<script type="text/javascript"> id = 216956; clr = "000000-ffffff-ffffff-000000-Name-Email-Subject-Message-Send--"; </script><script type="text/javascript" src="https://kontactr.com/wp.js"></script>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#clickable-name').click(function(){
+				window.location.href = '../../index.html';
+			});
+			$('#about-btn').click(function(){
+				try{
+					window.history.back();
+				}catch(x){
+					window.location.href = '../about/about.html';	
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

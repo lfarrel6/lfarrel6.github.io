@@ -1,136 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hey.</title>
+	<title>Liam Farrelly</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" type="image/x-icon" href="imgs/logo-transparent.png">
-	<link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src='lib/typed.js'></script>
+	<link rel="stylesheet" type="text/css" href="index-styling.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Merriweather|Montserrat|Playfair+Display" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-	<div id="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="https://github.com/lfarrel6">GitHub</a>
-		<a href="https://twitter.com/LiamPTFarrelly">Twitter</a>
-		<a href="https://linkedin.com/in/lfarrelly">LinkedIn</a>
-		<!--<a href="https://instagram.com/liamptfarrelly">Instagram</a>-->
+	<div id="nav">
+		<div id="nav-bar">
+			<span class="branding" id="clickable-name">L<span class="hidden-letters" id="hidden-name1">iam</span>F<span class="hidden-letters" id="hidden-name2">arrelly</span></span>
+			<a href="pages/blog/blog.html" class="nav-btns">blog</a>
+			<a href="pages/about/about.html" class="nav-btns">about</a>
+			<a href="pages/works/works.html" class="nav-btns">works</a>
+		</div>
 	</div>
-	<div id="content-wrapper">
-		
-		<div id="menu-tile">
-			<img id="menu-btn" src="imgs/material-menu.svg" onclick="openNav()">
-		</div>
-
-		<div class="main-content" id="left-body">
-			<div id='branding-tile'>
-				<img src="imgs/logo-svg.svg" id='logo-tile'>
-				<div id='name-tile'>
-					<h1 id="name">LIAM FARRELLY</h1>
-					<div id="sub-name"></div>
-				</div>
+	<div id="container">
+		<div id="greeting">
+			<h1>Welcome to my online <a id="cv-link" href="assets/CV.pdf">résumé</a>.</h1>
+			<p>Software Engineer & Design Enthusiast.</p>
+			<div id="photo-credit">
+				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:Montserrat, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ales Nesetril</span></a>
 			</div>
 		</div>
-
-		<div class="main-content" id="right-body">
-			<div class="project-tiles" id="project-1"><h3 class="project-link" onclick="showL1()"">SpeakUpp</h3></div>
-			<div class="project-tiles" id="project-2"><h3 class="project-link" onclick="showL2()">KeepAppy</h3></div>
-			<div class="project-tiles" id="project-3"><h3 class="project-link" onclick="showL3()">BLE Proxying</h3></div>
-		</div>
-
-		<div class="details" id='wrapper-1'>
-			<div class='project-details'>
-				<span class='details-close' onclick='closeDetails1()'>X</span>
-				<div class='details-wrapper'>
-					<div class="details-heading">
-						<img src="imgs/logo.jpg" alt="SpeakUpp">
-						<h2>SpeakUpp</h2>
-						<p>Bridging the gap between speaker and audience.</p>
-					</div>
-					<hr>
-					<p class='details-body'>SpeakUpp provides a platform for furthering audience engagement at various events. I cofounded SpeakUpp with Eoin and Liam in 2017. We're really excited to see it reach its potential.<hr>Check out our <a class='details-links' href='https://speakupp.co.uk'>website</a>.</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="details" id='wrapper-2'>
-			<div class='project-details'>
-				<span class='details-close' onclick='closeDetails2()'>X</span>
-				<div class='details-wrapper'>
-					<div class="details-heading">
-						<img src="imgs/keepAppyVector.png" id='keepappy' alt="Keep Appy Logo">
-						<h2>KeepAppy</h2>
-						<p>Join the wellness movement today!</p>
-					</div>
-					<hr>
-					<p close='details-body'>KeepAppy is a mental well being app that helps you and your employees. I joined KeepAppy in March 2018 as a developer. I am delighted to have the opportunity to work on such a rewarding initiative.<hr>Check out the <a class='details-links' href='http://keepappy.com'>website</a>, or get the app!</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="details" id='wrapper-3'>
-			<div class='project-details'>
-				<span class='details-close' onclick='closeDetails3()'>X</span>
-				<div class='details-wrapper'>
-					<div class="details-heading">
-						<img src="imgs/Bluetooth_Smart_Logo.png" alt="Bluetooth Low Energy">
-						<h2>BLE Proxying</h2>
-						<p>I built a system for remote access to BLE devices.</p>
-					</div>
-					<hr>
-					<p class='details-body'>Using <a class='details-links' href="https://github.com/noble/noble">Noble</a>, and <a class='details-links' href="https://github.com/mcollina/node-coap">Node CoAP</a> I made a CoAP proxy server which tracks local bluetooth devices.<br>I also made a http client to speak to the CoAP proxy, providing users with a GUI while interacting with the proxy.<hr>Check out the project on <a class='details-links' href='https://github.com/lfarrel6/BLE-proxy-fyp'>Github</a>.</p>
-				</div>
-			</div>
-		</div>
-
 	</div>
+	
 	<script type="text/javascript">
-		var ghostscript = {
-			strings: [" "],
-			showCursor: false
-		};
-		var subscript = {
-			strings: ["More to come."],
-			typeSpeed: 50,
-			backSpeed: 50,
-			backDelay: 500,
-			showCursor: false
-		}
-		
-		var subtext = new Typed('#sub-name', subscript);
-
-		function openNav(){
-			document.getElementById("sidenav").style.width = "250px";
-		}
-
-		function closeNav(){
-			document.getElementById("sidenav").style.width = "0px";
-		}
-
-		function showL1(){
-			document.getElementById('wrapper-1').style.display = 'block';
-		}
-
-		function showL2(){
-			document.getElementById('wrapper-2').style.display = 'block';
-		}
-
-		function showL3(){
-			document.getElementById('wrapper-3').style.display = 'block';
-		}
-
-		function closeDetails1(){
-			document.getElementById('wrapper-1').style.display = 'none';
-		}
-
-		function closeDetails2(){
-			document.getElementById('wrapper-2').style.display = 'none';
-		}
-
-		function closeDetails3(){
-			document.getElementById('wrapper-3').style.display = 'none';
-		}
-
+		$(document).ready(function(){
+			$("#clickable-name").click(function(){
+				$("#hidden-name1").toggleClass("hidden-letters");
+				$("#hidden-name2").toggleClass("hidden-letters");
+			});
+		});
 	</script>
 </body>
 </html>

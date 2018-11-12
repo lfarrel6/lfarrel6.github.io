@@ -1,0 +1,33 @@
+.header{
+	margin-top: 4em;
+	text-align: center;
+	font-family: 'Merriweather', serif;
+}
+
+.header > h2 > a{
+	color: #fff;
+	text-decoration: underline;
+}
+
+.header > p{
+	color: #aaa;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+#contact-form{
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	text-align: center;
+}
+
+#contact-form > iframe{
+	padding-top: 20px;
+	border: solid #fff 2px;
+	height: 600px;
+}
+
+#kform > p > input{
+	border: solid #aaa 2px;
+}
