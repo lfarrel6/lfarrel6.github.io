@@ -1,63 +1,320 @@
-html, body{
+body{
+	margin:0;
 	background-color:#000;
 	color: #fff;
+	font-family: 'Montserrat', sans-serif;
 }
 
-#container{
-	grid-area: top;
-	text-align: center;
-	display: grid;
-	grid-template-rows: 1fr 2fr 2fr;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas: 'top top top'
-						 'mid mid mid'
-						 'btm btm btm';
+p{
+	line-height: 1.6;
 }
 
-#nav{
-	text-align: left;
-	margin-bottom: 1em;
-}
-
-#nav-bar{
-	height: 3em;
-	padding-bottom: 0.3em;
-	border-bottom: 0.1em solid #fff;
-}
-
-.branding{
+.serif{
 	font-family: 'Playfair Display', serif;
-	font-size: 2.5em;
-	cursor: pointer;
-	color: #fff;
 }
 
-.hidden-letters{
-	display:none;
+#super-secret-canvas{
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+#container{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 1.8em;
 }
 
-.nav-btns{
-	float: right;
-	padding-right: 1.5em;
-	padding-top: 1.5em;
-	text-decoration: none;
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
+#header{
+	display: grid;
+	grid-template-columns: 5fr 1fr 6fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 'left . right';
+	padding-bottom: 1.8em;
+	border-bottom: 2px solid #fff;
+	margin-bottom: 4em;
 }
 
-.active{
-	color: #aaa;
-	margin: 0;
-	cursor: pointer;
+#header > .avatar{
+	grid-area: left;
+	display: inline-block;
+	text-align: right;
 }
 
-#greeting{
-	grid-area: mid;
-	text-align:center;
+.avatar > .picture{
+	border-radius: 50%;
+	padding: 5px;
+	border: 2px dashed #fff;
+	height: 250px;
+	width: 250px;
 }
-#greeting > h1{
-	font-family: 'Merriweather', serif;
+
+#header > #about{
+	grid-area: right;
+	display: inline-block;
+	text-align: left;
+	padding-top: 5px;
 }
-#greeting > p{
-	font-family: 'Montserrat', sans-serif;
+
+#contact > a{
+	margin: 0 0.5em 0 0.5em;
+}
+
+.connect-icon{
+	height: 40px;
+	width: 40px;
+}
+
+#projects{
+	margin-bottom: 4em;
+}
+
+.project-tile{
+	margin: 2em 0 2em 0;
+	display: grid;
+	grid-template-columns: 2fr 3fr 1fr 6fr;
+	grid-template-rows: 1fr 4fr;
+	grid-template-areas: '. tile-left . title'
+						 '. tile-left . tile-right';
+}
+
+.project-title{
+	grid-area: title;
+	text-align: left;
+}
+
+.project-tile > div.project-image{
+	grid-area: tile-left;
+	height: 300px;
+	min-width: 300px;
+	text-align: center;
+}
+
+.project-showcase.horizontal{
+	width: 350px;
+	margin-top:30%;
+}
+
+.project-showcase.vertical{
+	height: 300px;
+	/*width: 400px;*/
+}
+
+.project-tile > div.project-info{
+	grid-area: tile-right;
+	text-align: left;
+	position: relative;
+}
+.project-tile > div.project-info > h2{
+	margin-top:0;
+}
+.project-tile > div.project-info > div.further-info{
+	margin:0;
+}
+.project-tile > div.project-info > div.further-info > a{
+	margin-right:0.8em;
+}
+.project-tile > div.project-info > div{
+	width:75%;
+	margin-top: 2em;
+}
+
+.tooltip-target{
+	display:inline-block;
+	position: relative;
+	margin-right: 0.8em;
+}
+
+.tooltip{
+	visibility: hidden;
+	width: 200px;
+	background-color: white;
+	color: #000;
+	font-size:0.8em;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/*POSITIONING*/
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.tooltip-target:hover .tooltip{
+	visibility: visible;
+}
+
+.tooltip-target .tooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+#skills{
+	margin-bottom: 2em;
+}
+
+#languages{
+	border-top:2px solid #fff;
+}
+.skill-wrapper{
+	margin:auto;
+	width:75%;
+}
+.skill-wrapper > h2{
+	text-decoration: underline;
+}
+
+.skill-tile{
+	height: 2em;
+	min-width: 6em;
+	padding: 0.6em 0.5em 0.5em 0.5em;
+	display: inline-block;
+	background-color: #fff;
+	color: #000;
+	margin: 2em;
+	border-radius: 10px;
+}
+.skill-tile > p{
+	margin:0;
+	font-weight: bold;
+}
+
+/*
+CSS MEDIA QUERIES
+DETECT MOBILE DEVICES
+*/
+
+@media (max-width:800px){
+	#header{
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: 'pic'
+							 'bio';
+		padding-bottom: 1.8em;
+		border-bottom: 2px solid #fff;
+		margin-bottom: 4em;
+	}
+	#header > .avatar{
+		grid-area: pic;
+		display: inline-block;
+		text-align: center;
+	}
+	.avatar > .picture{
+		border-radius: 50%;
+		padding: 5px;
+		border: 2px dashed #fff;
+		height: 150px;
+		width: 150px;
+	}
+	#header > #about{
+		grid-area: bio;
+		display: inline-block;
+		text-align: center;
+		padding-top: 5px;
+		width: 95%;
+		margin:auto;
+	}
+	#contact{
+		margin-top:3em;
+	}
+	.project-tile{
+		margin: 0em 0 2em 0;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 'title'
+							 'image'
+							 'info';
+		border-bottom: 2px solid rgba(200,200,200,0.6);
+	}
+	.project-tile:last-of-type{
+		border-bottom:none;
+	}
+	.project-title{
+		grid-area: title;
+		text-align: center;
+		margin: 0;
+	}
+
+	.project-tile > div.project-image{
+		grid-area: image;
+		height: 200px;
+		text-align: center;
+	}
+
+	.project-showcase.horizontal{
+		width: 200px;
+	}
+
+	.project-showcase.vertical{
+		height: 200px;
+		margin-top:2%;
+	}
+
+	.project-tile > div.project-info{
+		grid-area: info;
+		text-align: center;
+	}
+	.project-tile > div.project-info > div{
+		width:90%;
+		margin: auto;
+	}
+	.project-tile > div.project-info > div.further-info{
+		width:100%;
+		margin:0;
+	}
+	#keepappy-img{
+		height:100px;
+	}
+	#keepappy-img>img{
+		margin-top:10%;
+	}
+	#skills{
+		margin-bottom: 1em;
+	}
+	#languages{
+		border-top:2px solid #fff;
+	}
+	.skill-wrapper{
+		margin:auto;
+		width:75%;
+	}
+	.skill-wrapper > h2{
+		text-decoration: underline;
+	}
+
+	.skill-tile{
+		height: 2em;
+		min-width: 4em;
+		padding: 0.6em 0.5em 0.5em 0.5em;
+		display: inline-block;
+		background-color: #fff;
+		color: #000;
+		margin: 0.5em;
+		border-radius: 10px;
+	}
+	.skill-tile > p{
+		margin:0;
+		font-weight: bold;
+	}
+}
+@media (max-width: 400px){
+	.project-title{
+		width:90%;
+		margin:auto;
+	}
 }

@@ -2,39 +2,145 @@
 <html>
 <head>
 	<title>Liam Farrelly</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="index-styling.css">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript" src="utils.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Bitter|Merriweather|Montserrat|Playfair+Display" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-	<div id="nav">
-		<div id="nav-bar">
-			<span class="branding" id="clickable-name">L<span class="hidden-letters" id="hidden-name1">iam</span>F<span class="hidden-letters" id="hidden-name2">arrelly</span></span>
-			<a href="pages/contact/contact.html" class="nav-btns">contact</a>
-			<a href="pages/blog/blog.html" class="nav-btns">blog</a>
-			<a href="pages/about/about.html" class="nav-btns">about</a>
-			<a href="pages/works/works.html" class="nav-btns">works</a>
-		</div>
-	</div>
+	<canvas id="super-secret-canvas"></canvas>
 	<div id="container">
-		<div id="greeting">
-			<h1>Welcome to my online <a id="cv-link" href="assets/CV.pdf">résumé</a>.</h1>
-			<p>Software Engineer & Design Enthusiast.</p>
-			<div id="photo-credit">
-				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:Montserrat, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ales Nesetril</span></a>
+		<div id="header">
+			<div class="avatar">
+				<img class="picture" src="img/me.jpg">
+			</div>
+			<div id="about">
+				<h1 class="serif">Liam Farrelly</h1>
+				<p>Hey, I'm Liam. I'm a <span id="age-template"></span> year old developer from Dublin, Ireland.<br>I have experience in web, mobile, and full-stack development.<br>I'm a design enthusiast and always looking for interesting new projects.<br><br><strong>Currently based in:</strong> Dublin, Ireland ☘️</p>
+				<div id="contact">
+					<a href="mailto:lfarrel6@tcd.ie?subject=Github.io: General Contact"><img class="connect-icon" src="img/email.png" alt="email"></a>
+					<a href="https://twitter.com/liamptfarrelly"><img class="connect-icon" id="twitter" src="img/twitter.png" alt="Twitter"></a>
+					<a href="https://github.com/lfarrel6"><img class="connect-icon" src="img/GitHub64px.png" alt="Github"></a>
+					<a href="https://linkedin.com/lfarrelly"><img class="connect-icon" src="img/LinkedIn66px2.png" alt="LinkedIn"></a>
+				</div>
+			</div>
+		</div>
+		<div id="projects">
+			<div class="project-tile">
+				<div class="project-image">
+					<img class="project-showcase vertical" src="img/projects/heart-icon1.png">
+				</div>
+				<h2 class="serif project-title">A Generic Architecture for Remote Patient Monitoring</h2>
+				<div class="project-info">
+					<div>
+						<p>
+							A solo project.
+							<br>
+							I successfully prototyped an end to end system for remote BLE data access.
+							<br>
+							The system involved a web-client, an HTTP-CoAP translation server, and a CoAP-BLE translation server.
+							<br>
+							The prototype allowed users to remotely execute instantaneous reads, as well as subscribing to a characteristic.
+						</p>
+					</div>
+					<div class="further-info">
+						<div class="tooltip-target">	
+							<a href="mailto:lfarrel6@tcd.ie?subject=Github.io: Bluetooth Proxy"><img class="connect-icon" src="img/email.png" alt="email me about this project"></a>
+							<span class="tooltip">Email me about this project</span>
+						</div>
+						<a href="https://github.com/lfarrel6/BLE-Proxy-FYP"><img class="connect-icon" src="img/GitHub64px.png" alt="View the project on Github"></a>
+						<a href="assets/project-report.pdf"><img class="connect-icon" src="img/file.png" alt="View my report on the project"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-tile">
+				<div class="project-image">
+					<img class="project-showcase vertical" src="img/projects/speakupp1.png">
+				</div>
+				<h2 class="serif project-title">SpeakUpp</h2>
+				<div class="project-info">
+					<div>
+						<p>
+							Co-Founder & Developer.
+							<br>
+							What started as a college project ended as a start up.
+							<br>
+							SpeakUpp aimed to bridge the gap between speaker and audience.
+							<br>
+							Furthering conference engagement through a suite of realtime interaction tools provided via web-app.
+						</p>
+					</div>
+					<div class="further-info">
+						<div class="tooltip-target">	
+							<a href="mailto:lfarrel6@tcd.ie?subject=Github.io: SpeakUpp"><img class="connect-icon" src="img/email.png" alt="email me about this project"></a>
+							<span class="tooltip">Email me about this project</span>
+						</div>
+						<a href="https://irishtechnews.ie/business-showcase-speakupp" target="_blank"><img class="connect-icon" src="img/link.png" alt="View my report on the project"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-tile">
+				<div class="project-image" id="keepappy-img">
+					<img class="project-showcase horizontal" src="img/projects/keepappy.png">
+				</div>
+				<h2 class="serif project-title">Keep Appy</h2>
+				<div class="project-info">
+					<div>
+						<p>
+							Freelance Development.
+							<br>
+							A personal wellness app designed to empower people in their journey towards mental and physical wellbeing.
+							<br>
+							I worked with Keep Appy to redevelop their hybrid mobile app from Ionic v1 to v3.
+						</p>
+					</div>
+					<div class="further-info">
+						<div class="tooltip-target">
+							<a href="mailto:lfarrel6@tcd.ie?subject=Github.io: Keep Appy"><img class="connect-icon" src="img/email.png" alt="email me about this project"></a>
+							<span class="tooltip">Email me about this project</span>
+						</div>
+						<a href="https://keepappy.com" target="_blank"><img class="connect-icon" src="img/link.png" alt="View my report on the project"></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="skills">
+			<h1 class="serif">Skills</h1>
+			<div id="languages">
+				<div class="skill-wrapper">
+					<h2 class="serif">Programming</h2>
+					<div class="skill-tile"><p>JS</p></div>
+					<div class="skill-tile"><p>Python</p></div>
+					<div class="skill-tile"><p>C++</p></div>
+					<div class="skill-tile"><p>Java</p></div>
+					<div class="skill-tile"><p>Haskell</p></div>
+					<div class="skill-tile"><p>HTML</p></div>
+					<div class="skill-tile"><p>CSS</p></div>
+					<div class="skill-tile"><p>Ionic</p></div>
+					<div class="skill-tile"><p>AngularJS</p></div>
+					<div class="skill-tile"><p>React</p></div>
+					<div class="skill-tile"><p>NodeJS</p></div>
+				</div>
+			</div>
+			<div id="softwares">
+				<div class="skill-wrapper">
+					<h2 class="serif">Softwares</h2>
+					<div class="skill-tile"><p>MODX</p></div>
+					<div class="skill-tile"><p>Git</p></div>
+					<div class="skill-tile"><p>TortoiseSVN</p></div>
+					<div class="skill-tile"><p>Slack</p></div>
+					<div class="skill-tile"><p>Jira</p></div>
+					<div class="skill-tile"><p>Excel</p></div>
+					<div class="skill-tile"><p>Visual Studio</p></div>
+					<div class="skill-tile"><p>Windows</p></div>
+					<div class="skill-tile"><p>Android Studio</p></div>
+				</div>
 			</div>
 		</div>
 	</div>
-	
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#clickable-name").click(function(){
-				$("#hidden-name1").toggleClass("hidden-letters");
-				$("#hidden-name2").toggleClass("hidden-letters");
-			});
-		});
-	</script>
 </body>
 </html>
