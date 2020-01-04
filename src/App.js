@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { MaxHeightContainer, MaxHeightRow, Sidenav } from './components';
+import { Col } from 'react-bootstrap';
+import { 
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <MaxHeightContainer>
+        <MaxHeightRow>
+          <Col md={4}>
+            <Sidenav />
+          </Col>
+          <Col md={8}>
+            <Switch>
+              <Route path='/projects'>
+                <h1>Projects</h1>
+              </Route>
+              <Route path='/work'>
+                <h1>Work</h1>
+              </Route>
+              <Route path='/'>
+                <h1>Homepage</h1>
+              </Route>
+            </Switch>
+          </Col>
+        </MaxHeightRow>
+      </MaxHeightContainer>
+    </Router>
   );
 }
 
