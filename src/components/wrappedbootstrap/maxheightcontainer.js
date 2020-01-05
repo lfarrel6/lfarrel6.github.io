@@ -6,6 +6,10 @@ const FluidContainer = ({className, children, ...rest}) => (
     <Container fluid className={className} {...rest}>{children}</Container>
 )
 
-export const MaxHeightContainer = styled(FluidContainer)`
+export const MaxHeightContainer = styled(Container)`
+    min-height: 100vh;
+`;
+
+export const MaxHeightFluidContainer = styled(FluidContainer)`
     min-height: 100vh;
 `;

@@ -1,1 +1,1 @@
-export { default } from './sidenav.js';
+export { default } from './sidenav';

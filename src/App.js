@@ -1,36 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { MaxHeightContainer, MaxHeightRow, Sidenav } from './components';
+
+import { 
+  MaxHeightFluidContainer,
+  MaxHeightRow,
+  Sidenav,
+  Controller 
+} from './components';
+
 import { Col } from 'react-bootstrap';
 import { 
-  BrowserRouter as Router,
-  Switch,
-  Route
+  BrowserRouter as Router
 } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-      <MaxHeightContainer>
+      <MaxHeightFluidContainer>
         <MaxHeightRow>
           <Col md={4}>
             <Sidenav />
           </Col>
           <Col md={8}>
-            <Switch>
-              <Route path='/projects'>
-                <h1>Projects</h1>
-              </Route>
-              <Route path='/work'>
-                <h1>Work</h1>
-              </Route>
-              <Route path='/'>
-                <h1>Homepage</h1>
-              </Route>
-            </Switch>
+            <Controller />
           </Col>
         </MaxHeightRow>
-      </MaxHeightContainer>
+      </MaxHeightFluidContainer>
     </Router>
   );
 }

@@ -25,30 +25,22 @@ function Sidenav(){
     const homepageLink = '/';
     const projectsLink = '/projects';
     const workLink = '/work';
+    const links = [
+        {to: homepageLink, distance: 180, active:(homepageLink===pathname), label: 'Homepage'},
+        {to: projectsLink, distance: 120, active:(projectsLink===pathname), label: 'Projects'},
+        {to: workLink, distance: 70, active:(workLink===pathname), label: 'Work'},
+    ];
 
     return (
         <StyledSidenav>
-            <PlainLink 
-                to={homepageLink}
-                distance={180}
-                active={ homepageLink===pathname }
-            >
-                <ShimmerText>Homepage</ShimmerText>
-            </PlainLink>
-            <PlainLink 
-                to={projectsLink}
-                distance={120}
-                active={ projectsLink===pathname }
-            >
-                <ShimmerText>Projects</ShimmerText>
-            </PlainLink>
-            <PlainLink 
-                to={workLink}
-                distance={70} 
-                active={ workLink===pathname }
-            >
-                <ShimmerText>Work</ShimmerText>
-            </PlainLink>
+            {links.map( ({label,...rest}, idx) => (
+                <PlainLink
+                    key={idx}
+                    {...rest}
+                >
+                    <ShimmerText>{label}</ShimmerText>
+                </PlainLink>
+            ))}
         </StyledSidenav>
     );
 }
