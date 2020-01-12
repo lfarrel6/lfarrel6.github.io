@@ -5,7 +5,10 @@ import {
   MaxHeightFluidContainer,
   MaxHeightRow,
   Sidenav,
-  Controller 
+  Controller,
+  Neumorphic,
+  Background,
+  NeuSmiley
 } from './components';
 
 import { Col } from 'react-bootstrap';
@@ -13,11 +16,22 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 
+const NeuBackground = () => {
+  return (
+    <Background>
+      <NeuSmiley height='300px' width='300px' />
+    </Background>
+  );
+}
+
 function App() {
+
+
   return (
     <Router>
       <MaxHeightFluidContainer>
         <MaxHeightRow>
+          <NeuBackground />
           <Col md={4}>
             <Sidenav />
           </Col>
