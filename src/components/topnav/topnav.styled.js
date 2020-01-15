@@ -14,5 +14,6 @@ export const StickyTopNav = styled.nav`
 `;
 
 export const NavHeader = styled.h2`
-	color: ${({ theme }) => theme.light};
+	color: ${({ theme }) => theme.bgLight};
+	margin: 0;
 `;

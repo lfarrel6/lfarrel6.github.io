@@ -4,7 +4,7 @@ import { StickyTopNav, NavHeader } from './topnav.styled';
 function TopNav() {
 	return (
 		<StickyTopNav>
-			<NavHeader>{'<Liam Farrelly />'}</NavHeader>
+			<NavHeader>{'LIAMFARRELLY'}</NavHeader>
 		</StickyTopNav>
 	);
 }
