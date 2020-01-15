@@ -13,3 +13,4 @@ export { default as Background } from './background';
 export * from './neusmiley';
 export * from './shimmertext';
 export * from './topnav';
+export * from './bottomnav';

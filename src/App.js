@@ -7,6 +7,7 @@ import {
 	Background,
 	NeuSmiley,
 	TopNav,
+	BottomNav,
 } from './components';
 
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -27,6 +28,7 @@ function App() {
 			<Router>
 				<MaxHeightFluidContainer>
 					<TopNav />
+					<BottomNav />
 					<MaxHeightRow>
 						<NeuBackground />
 					</MaxHeightRow>
