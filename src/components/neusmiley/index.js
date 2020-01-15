@@ -1,1 +1,1 @@
-export { default } from "./neusmiley";
+export { default as NeuSmiley } from './neusmiley';

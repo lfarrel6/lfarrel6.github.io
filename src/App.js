@@ -1,33 +1,39 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
 import {
-  MaxHeightFluidContainer,
-  MaxHeightRow,
-  Background,
-  NeuSmiley
-} from "./components";
+	MaxHeightFluidContainer,
+	MaxHeightRow,
+	Background,
+	NeuSmiley,
+	TopNav,
+} from './components';
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from 'react-router-dom';
+import { theme } from './theme';
+import { ThemeProvider } from 'styled-components';
 
 const NeuBackground = () => {
-  return (
-    <Background>
-      <NeuSmiley height="300px" width="300px" />
-    </Background>
-  );
+	return (
+		<Background>
+			<NeuSmiley height='300px' width='300px' />
+		</Background>
+	);
 };
 
 function App() {
-  return (
-    <Router>
-      <MaxHeightFluidContainer>
-        <MaxHeightRow>
-          <NeuBackground />
-        </MaxHeightRow>
-      </MaxHeightFluidContainer>
-    </Router>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<Router>
+				<MaxHeightFluidContainer>
+					<TopNav />
+					<MaxHeightRow>
+						<NeuBackground />
+					</MaxHeightRow>
+				</MaxHeightFluidContainer>
+			</Router>
+		</ThemeProvider>
+	);
 }
 
 export default App;
