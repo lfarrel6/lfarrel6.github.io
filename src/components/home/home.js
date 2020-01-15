@@ -1,11 +1,11 @@
-import React from 'react';
-import { MaxHeightContainer } from '../wrappedbootstrap';
-import Header from '../header';
+import React from "react";
+import { MaxHeightContainer } from "../wrappedbootstrap";
+import Header from "../header";
 
-function Home(){
+function Home() {
   return (
     <MaxHeightContainer>
-      <Header align='center'>home</Header>
+      <Header align="center">home</Header>
     </MaxHeightContainer>
   );
 }

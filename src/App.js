@@ -1,24 +1,22 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import { 
+import {
   MaxHeightFluidContainer,
   MaxHeightRow,
   Background,
   NeuSmiley
-} from './components';
+} from "./components";
 
-import { 
-  BrowserRouter as Router
-} from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 
 const NeuBackground = () => {
   return (
     <Background>
-      <NeuSmiley height='300px' width='300px' />
+      <NeuSmiley height="300px" width="300px" />
     </Background>
   );
-}
+};
 
 function App() {
   return (

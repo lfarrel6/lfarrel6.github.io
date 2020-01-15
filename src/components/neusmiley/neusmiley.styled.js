@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import React from 'react';
+import styled from "styled-components";
+import React from "react";
 
 export const Eye = styled.p`
   width: 50px;
@@ -10,9 +10,9 @@ export const Eye = styled.p`
   -moz-border-radius: 100px/160px;
   position: absolute;
   top: 40px;
-  box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
-  -webkit-box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
-  -moz-box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.8);
 `;
 
 export const LeftEye = styled(Eye)`
@@ -32,19 +32,19 @@ export const SmileyEyes = (
 
 export const SmileBase = styled.div`
   width: 200px;
-	height: 70px;
-	border: 10px solid #222;
-	border-top: 0;
-	background: rgba(0,0,0,0);
-	-moz-border-radius: 0 0 120px 120px / 0 0 90px 90px;
-	-webkit-border-radius: 0 0 120px 120px 0 0 90px 90px;
-	border-radius: 0 0 120px 120px / 0 0 90px 90px;
-	position: absolute;
-	bottom: 50px;
-	left: 38px;
-	box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
-	-webkit-box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
-	-moz-box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
+  height: 70px;
+  border: 10px solid #222;
+  border-top: 0;
+  background: rgba(0, 0, 0, 0);
+  -moz-border-radius: 0 0 120px 120px / 0 0 90px 90px;
+  -webkit-border-radius: 0 0 120px 120px 0 0 90px 90px;
+  border-radius: 0 0 120px 120px / 0 0 90px 90px;
+  position: absolute;
+  bottom: 50px;
+  left: 38px;
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.8);
 `;
 
 export const SmileCorner = styled.div`
@@ -64,7 +64,7 @@ export const SmileCorner = styled.div`
 export const SmileCornerRight = styled(SmileCorner)`
   left: 180px;
   -webkit-transform: rotate(-65deg);
-  -moz-transform: rotate(-65deg);	
+  -moz-transform: rotate(-65deg);
   transform: rotate(-65deg);
 `;
 
@@ -73,7 +73,7 @@ export const Smile = (
     <SmileCorner />
     <SmileCornerRight />
   </SmileBase>
-)
+);
 
 export const SmileyFace = styled.div`
   width: 300px;

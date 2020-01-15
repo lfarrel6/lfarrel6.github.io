@@ -1,13 +1,13 @@
-import React from 'react';
-import { MaxHeightContainer } from '../wrappedbootstrap';
-import Header from '../header';
+import React from "react";
+import { MaxHeightContainer } from "../wrappedbootstrap";
+import Header from "../header";
 
-function Projects(){
+function Projects() {
   return (
     <MaxHeightContainer>
-      <Header align='center'>projects</Header>
+      <Header align="center">projects</Header>
     </MaxHeightContainer>
-  )
+  );
 }
 
 export default Projects;
