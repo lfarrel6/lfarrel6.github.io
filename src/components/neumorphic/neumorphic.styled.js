@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const NeumorphicCircle = styled.div`
   display: inline-block;
-  margin: 1rem 2rem 2rem 3rem;
   border-radius: 50%;
   background-color: #EFEEEE;
   height: ${({height}) => height?height:'50px'};
