@@ -1,8 +1,12 @@
-import React from "react";
-import { StyledHeader } from "./header.styled";
+import React from 'react';
+import { PaddedHeader } from './header.styled';
 
-function Header({ children, ...rest }) {
-  return <StyledHeader {...rest}>{children}</StyledHeader>;
+function Header({ children }) {
+	return (
+		<div>
+			<PaddedHeader>{children}</PaddedHeader>
+		</div>
+	);
 }
 
 export default Header;

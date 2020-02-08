@@ -13,5 +13,9 @@ export const MaxHeightContainer = styled(Container)`
 `;
 
 export const MaxHeightFluidContainer = styled(FluidContainer)`
-	min-height: 100vh;
+	height: 100vh;
+	background-color: ${({ theme }) => theme.primary};
+	display: flex;
+	align-items: center;
+	transition: background-color linear 1s;
 `;

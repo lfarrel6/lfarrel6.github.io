@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PaddedHeader = styled.h1`
-	padding-bottom: 0.6rem;
+export const SpacedSubtitle = styled.h6`
+	line-height: 2.2;
 	color: ${({ theme }) => theme.text};
 `;
