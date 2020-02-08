@@ -7,8 +7,8 @@ export const ThemeToggle = styled.div`
 	position: absolute;
 	bottom: 50px;
 	right: 50px;
-	height: 30px;
-	width: 30px;
+	height: 36px;
+	width: 36px;
 	padding: 5px;
 	display: flex;
 	align-items: center;

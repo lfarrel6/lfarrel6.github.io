@@ -6,14 +6,16 @@ export const StickyTopNav = styled.nav`
 	left: 0;
 	width: 100%;
 	height: 64px;
-	background-color: ${({ theme }) => theme.dark};
 
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
+	padding: 0 60px;
 `;
 
-export const NavHeader = styled.h2`
-	color: ${({ theme }) => theme.bgLight};
+export const NavHeader = styled.h4`
+	text-decoration: underline;
+	color: ${({ theme }) => theme.text};
 	margin: 0;
+	cursor: pointer;
 `;

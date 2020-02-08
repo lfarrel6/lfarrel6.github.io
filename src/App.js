@@ -10,6 +10,7 @@ import {
 	SubtleLink,
 	PaddedDiv,
 	FAB,
+	TopNav,
 } from './components';
 
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -34,6 +35,7 @@ function App() {
 		<ThemeProvider theme={statefulTheme}>
 			<Router>
 				<MaxHeightFluidContainer>
+					<TopNav />
 					<PaddedDiv>
 						<Header>Hey, I'm Liam.</Header>
 						<Subtitle>
@@ -44,7 +46,7 @@ function App() {
 							<br />
 							If that sounds like something that would interest you, check out
 							our{' '}
-							<SubtleLink href='https://evervault.com/careers'>
+							<SubtleLink target='_blank' href='https://evervault.com/careers'>
 								careers page
 							</SubtleLink>
 							.
