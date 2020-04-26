@@ -41,14 +41,25 @@ module.exports = {
 					'image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false',
 				],
 			},
+			{
+				test: /\.ttf$/i,
+				use: [
+					{
+						loader: 'ttf-loader',
+						options: {
+							name: './font/[hash].[ext]',
+						},
+					},
+				]
+			}
 		],
 	},
 	plugins: [
 		new CheckerPlugin(),
 		new HtmlWebPackPlugin({
 			template: resolve(__dirname, '../public/index.html'),
-			favicon: resolve(__dirname, '../public/favicon.ico'),
 			filename: './index.html',
+			favicon: resolve(__dirname, '../public/favicon.dark.ico'),
 		}),
 	],
 	externals: {
